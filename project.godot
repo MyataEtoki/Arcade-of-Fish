@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Arcade of fish"
-run/main_scene="res://Player.tscn"
+run/main_scene="res://main.tscn"
 config/use_hidden_project_data_directory=false
 config/custom_user_dir_name="Arcade of Fish"
 config/features=PackedStringArray("4.2", "Mobile")
