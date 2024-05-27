@@ -4,3 +4,5 @@ res://Mob.gd
 res://Mob.tscn
 res://main.tscn
 res://main.gd
+res://hud.tscn
+res://hud.gd

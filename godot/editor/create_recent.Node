@@ -1,4 +1,7 @@
 Timer
+Button
+Label
+CanvasLayer
 Area2D
 RigidBody2D
 PathFollow2D

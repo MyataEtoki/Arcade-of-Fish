@@ -1,12 +1,7 @@
 extends Node
 
 @export var mob_scene: PackedScene
-var timer
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	new_game()
-
+var timer = 23 # Ограниченное время игры
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -17,9 +12,11 @@ func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$Player.hide()
+	$HUD.show_game_over()
 
 func new_game():
-	timer = 7 # Ограниченное время игры
+	$HUD.update_score($Player.score)
+	$HUD.show_message("Начало")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 
@@ -54,5 +51,6 @@ func _on_mob_timer_timeout():
 
 func _on_score_timer_timeout():
 	timer -= 1
+	$HUD.update_score($Player.score)
 
 
