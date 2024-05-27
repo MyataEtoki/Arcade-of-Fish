@@ -10,12 +10,13 @@ func show_message(text):
 func show_game_over():
 	show_message("YOU DIED \n (рыбы долго не живут)")
 	# Wait until the MessageTimer has counted down.
-	await $MessageTimer.timeout
-	$Message.text = "Добро пожаловать в - Рыбную Аркаду!"
-	$Message.show()
+	#await $MessageTimer.timeout
+	
+	#$Message.text = "Добро пожаловать в - Рыбную Аркаду!"
+	#$Message.show()
 	# Make a one-shot timer and wait for it to finish.
-	await get_tree().create_timer(1.0).timeout
-	$StartButton.show()
+	#await get_tree().create_timer(1.0).timeout
+	#$StartButton.show()
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
