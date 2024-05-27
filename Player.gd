@@ -3,9 +3,11 @@ signal hit
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	score = 0
 	screen_size = get_viewport_rect().size
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,3 +44,4 @@ func start(pos):
 
 func _on_body_entered(body):
 	body.queue_free()
+	score+=1

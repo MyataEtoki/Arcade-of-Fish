@@ -19,8 +19,6 @@ mob_scene = ExtResource("2_8mo2u")
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="ScoreTimer" type="Timer" parent="."]
-
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
@@ -34,6 +32,8 @@ curve = SubResource("Curve2D_43dil")
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 rotation = -0.00312499
 
+[node name="ScoreTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
-[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
